@@ -4,6 +4,8 @@
 const name = "Gagan"; // Declare a variable 'name' and assign it the string "Gagan"
 const marks = "50/50"; // Declare a variable 'marks' and assign it the string "50/50"
 
+const ID = new String('101')    //we can decclare a string like this also using new keyword which creates a new object
+
 // Concatenate (join) strings using + operator and print the result
 //This method of printing is not preferred now a days
 console.log(name + ' has ' + marks + ' marks'); // Output: Gagan has 50/50 marks
