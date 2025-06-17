@@ -3,7 +3,7 @@ const mySym = Symbol('key1')                    //this is how we declare a varia
 const user = {
     name : "Gagan",                                                                 //Object stores data using key value pair
     age : 18,                                                                       //Ex: name = key anfd "Gagan" = value
-    email : "deshbhandarigagan07@gmail.com",                                        //This is one of the way to declare the Object
+    email : "deshbhandarigagan07@gmail.com",                                        //This is one of the way to declare the Object and this way of declaring is called as literals
     "College" : "University Of Visvesvarayya College Of Engineering",              //we can also declare key within "" but we have to use [] to access it and cannot access it using . 
     USN : 'U25UV23T064014',                                                          //key's type automatically gets converted by js based on its value 
     [mySym] : "Mykey2",                                                              //declaring a variable which is of symbol data type
