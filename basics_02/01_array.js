@@ -1,4 +1,4 @@
-const myArr1 = [ 0, 1 , 2 , 3 , 4 , 5]
+const myArr1 = [ 0, 1 , 2 , 3 , 4 , "gagan" , false]        //we can store any type of data elements in array
 const myArr2 = new Array( 1 , 2 , 3 , 4 , 5)        //These are two ways to declare a array
 
 myArr2.push(6)                    //Pushes 6 into the myArr2
