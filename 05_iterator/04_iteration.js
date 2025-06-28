@@ -25,4 +25,12 @@ const books = [
   //consider tht we only have to print book which satisfies some conditions
 
 let newBooks = books.filter( (book) =>(  book.genre == 'History') )
-console.log(newBooks);
+// console.log(newBooks);
+
+
+//if we want to manipulate the values in the array we use .map()
+//calling more than one method in a single line is called as method chaining
+const neNums2 = Numbers
+                .map( (item) => (item * 10 ) )
+                .filter( (item) =>(item > 40) )
+console.log(neNums2);
