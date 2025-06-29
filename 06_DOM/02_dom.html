@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Parent</title>
+</head>
+<body style="background-color: #212121; color:#fff">
+    <div class="parent">       
+        <!--parent is the parent class of all the html tag within its scope and all the elements belonging to day class is the child of parent class-->
+        <div class="day">Sunday</div>
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+        <div class="day">Friday</div>
+        <div class="day">Saturday</div>
+    </div>
+</body>
+<script>
+   const parent = document.querySelector('.parent') 
+
+
+//    console.log(parent);  
+   //prints
+//    <div class="parent">            <!--parent is the parent class of all the html tag within its scope and all the elements belonging to day class is the child of parent class-->
+//         <div class="day">Sunday</div>
+//         <div class="day">Monday</div>
+//         <div class="day">Tuesday</div>
+//         <div class="day">Wednesday</div>
+//         <div class="day">Thursday</div>
+//         <div class="day">Friday</div>
+//         <div class="day">Saturday</div>
+//     </div>
+
+// console.log(parent.children);  //It prints htmlcollection in the console of the web browser using which is array like collection and we can iterate through it using for loop
+
+
+// console.log(parent.children[0]);    //prints <div class="day">Sunday</div>
+
+//example for accessing all the child elements or GTMLCollection elemenst and changing their color to orange initialy their color was white
+for (let i = 0; i < parent.children.length; i++) {
+    parent.children[i].style.color = 'orange'    
+}
+
+// console.log(parent.firstElementChild);      //It gives the first child of the parent class  i.e, Sunday
+
+// console.log(parent.lastElementChild);      //it gives the last child of the parent class
+
+
+//we can access parent from its child also
+const child = document.querySelector('.day');
+console.log(child);   //gives the first element of the day class
+
+console.log(child.parentElement);      //gives the parent element of the .day class
+
+console.log(child.nextElementSibling);     //gives the next child element of the parent class i.e, sibling of the first element
+
+
+console.log(parent.childNodes)          //gives NodeList of parent class
+//each linebreak,div,text,comments all are considered as NODES
+//NOTE:- After a linebreak even if we give several linebreaks browser will takes 1st linebreak as the NODE and ognores other linebreaks
+
+</script>
+</html>
