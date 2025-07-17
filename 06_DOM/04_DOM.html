@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body style="background-color: #393838; color: aliceblue;">
+    <ul class="lang">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLang(Language){
+        let myUl = document.querySelector('.lang')
+        let myLi = document.createElement('li')
+        myLi.innerText = Language
+        myUl.appendChild(myLi);
+        
+    }
+    addLang('python')
+    addLang('C++')
+
+    //optimized way to add languav=ge into the list
+    function optimizedaddlang(lang){
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.lang').appendChild(li)
+    }
+    optimizedaddlang('java')
+
+    //Editing value which were previously added
+
+    //nth-child is used to select a particular value from list of several values here we are selecting python and it is 2nd child
+    const secondlnag = document.querySelector('li:nth-child(2)')
+    const newli = document.createElement('li')
+    newli.textContent = "Golang"
+    //using replacewith is better approach then changing value with innerHTML,innertext,textContent
+    secondlnag.replaceWith(newli)
+
+    //Removing elements which were added
+
+    //here we are removing the java which is the last element of thre list
+    const rmlang = document.querySelector('li:last-child')
+    rmlang.remove()
+</script>
+</html>

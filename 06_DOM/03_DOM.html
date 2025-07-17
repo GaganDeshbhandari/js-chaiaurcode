@@ -28,20 +28,27 @@
     div.style.width = '190px';
     const text = div.innerText = "Gagan Govind Deshbhandari"
     // div.innerText = 'black'
-    
+    //till here created div is in memory 
+
     //now we are adding the created element to the webpage appending it as a Child since all element are the child of the body
     //to append a child sytnax is parent_name.appendChild(child_name)
     document.body.appendChild(div)
 
     const clg = document.createElement('div')
-    console.log(clg);
+    // console.log(clg);
     clg.style.backgroundColor = 'green'
     clg.style.color = 'black'
     clg.style.padding = '15px'
     clg.style.borderRadius = '20px'
     clg.style.marginTop = '10px'
-    clg.innerText = "University Visvesvarayya College of Engineering"
+    // clg.innerText = "University Visvesvarayya College of Engineering"
+
+    //Instead of using .innerText we use .createTextNode as it is more efficient
+    const newtext = document.createTextNode('University Visvesvarayya College of Engineering');
+    clg.appendChild(newtext)
     document.body.appendChild(clg)
 
+
+    //Note : We can wrap this in a function and call tht function whenever we need to create a new element and add it to the document
 </script>
 </html>
