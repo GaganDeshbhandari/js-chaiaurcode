@@ -1,4 +1,4 @@
-### Async JS
+# Async JS
 
 #### What is Asynchronous JavaScript?
 Asynchronous JavaScript allows code to run without blocking the main thread. This means that long-running operations (like network requests, timers, or file reading) can happen in the background, letting the rest of the code continue executing.
