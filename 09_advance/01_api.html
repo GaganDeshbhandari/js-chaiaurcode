@@ -24,7 +24,15 @@
     // console.log(xhr.readyState);
     xhr.onreadystatechange = () =>{
         if(xhr.readyState == 4){
-            console.log(xhr.responseText.followers);
+            //The data we get in from the browser is most of the time is in string format
+            //Even though the data is shown like object in this example it is in String Format
+            //To access those values we need to convert it into the Object 
+            //By adding JSON.parse(ObjectName.responseText)
+            const followers = JSON.parse(xhr.responseText);
+            console.log(followers.followers);
+            console.log(xhr.responseText);
+            
+            
         }
     }
     xhr.send()
